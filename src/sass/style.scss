@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* Colors */
+
+/* Primary */
+
+$primaryCDarkBlue: hsl(233, 26%, 24%);
+$primaryCLimeGreen: hsl(136, 65%, 51%);
+$primaryCBrightCyan: hsl(192, 70%, 51%);
+
+/* Neutral */
+
+$neutralGrayishBlue: hsl(233, 8%, 62%);
+$neutralLightGrayishBlue: hsl(220, 16%, 96%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+$neutralWhite: hsl(0, 0%, 100%);
+
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    background-color: green;
+}
+
+$paddingForHeaderElements: 13px;
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    background-color: $neutralWhite;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $paddingForHeaderElements;
+}
+
+header nav {
+    display: flex;
+    color: $neutralGrayishBlue;
+}
+
+header img {
+    width: 35%;
+    height: auto;
+}
+
+#request-button span {
+    padding: $paddingForHeaderElements calc($paddingForHeaderElements*2);
+    border-radius: 20px;
+    color: $neutralWhite;
+    background-image: linear-gradient(to right, $primaryCLimeGreen, $primaryCBrightCyan);
+}
