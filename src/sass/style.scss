@@ -39,6 +39,7 @@ header {
     grid-template-columns: repeat(3, 33.3%);
     background-color: $neutralWhite;
     justify-content: center;
+    position: sticky;
     font-size: 0.9rem;
 }
 
@@ -46,17 +47,33 @@ header div {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $paddingForHeaderElements;
+}
+
+header img {
+    width: 30%;
+    height: auto;
 }
 
 header nav {
     display: flex;
+    gap: 25px;
+    height: 100%;
     color: $neutralGrayishBlue;
 }
 
-header img {
-    width: 35%;
-    height: auto;
+$border-tickness: 4px;
+
+header nav div {
+    padding: calc($paddingForHeaderElements*2) 0;
+    border-bottom: $border-tickness solid $neutralWhite;
+    transition: 0.1s ease-in-out;
+}
+
+header nav div:hover {
+    border-bottom: $border-tickness solid;
+    border-image-source: linear-gradient(to right, $primaryCLimeGreen, $primaryCBrightCyan);
+    border-image-slice: 1;
+    transition: 0.1s ease-in-out;
 }
 
 #request-button span {
