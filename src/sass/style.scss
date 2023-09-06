@@ -15,6 +15,7 @@ $neutralLightGrayishBlue: hsl(220, 16%, 96%);
 $neutralVeryLightGray: hsl(0, 0%, 98%);
 $neutralWhite: hsl(0, 0%, 100%);
 
+$contentWidth: 75%;
 
 * {
     box-sizing: border-box;
@@ -28,7 +29,6 @@ body {
     min-height: 100vh;
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
-    background-color: green;
     overflow-x: hidden;
 }
 
@@ -78,8 +78,10 @@ header nav div:hover {
     transition: 0.1s ease-in-out;
 }
 
-#request-button span {
+#request-button button {
     padding: $paddingForHeaderElements calc($paddingForHeaderElements*2.3);
+    font-size: 1rem;
+    border: none;
     border-radius: 25px;
     color: $neutralWhite;
     background-image: linear-gradient(to right, $primaryCLimeGreen, $primaryCBrightCyan);
@@ -91,9 +93,32 @@ header nav div:hover {
     height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-position: 270% 60%;
+    background-position: 44vw 60%;
     background-image: url("../assets/bg-intro-desktop.svg");
     background-repeat: no-repeat;
+    background-color: $neutralVeryLightGray;
+}
+
+#hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: calc(100% - $contentWidth);
+    margin-right: 15%;
+}
+
+#hero-text h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: $primaryCDarkBlue;
+}
+
+.subtext {
+    color: $neutralGrayishBlue;
+    margin-top: 20px;
+    margin-bottom: calc(20px + $paddingForHeaderElements);
+    line-height: 1.4;
 }
 
 #mockups-image-container {
@@ -101,9 +126,40 @@ header nav div:hover {
 }
 
 #mockups-image-container img {
-    width: 95%;
+    width: 95vmin;
     height: auto;
     position: absolute;
-    top: -19%;
-    right: -12%;
+    top: -15vh;
+    right: -6vw;
+}
+
+#eurobank-reasons {
+    background-color: $neutralLightGrayishBlue;
+}
+
+.content {
+    width: $contentWidth;
+    margin: auto;
+    padding: 10vh 0;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: $primaryCDarkBlue;
+}
+
+.content h3 {
+    font-weight: normal;
+    color: $primaryCDarkBlue;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cardicon {
+    display: block;
 }
